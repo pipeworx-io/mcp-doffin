@@ -1,0 +1,18 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.pipeworx-io/doffin",
+  "title": "Doffin",
+  "description": "Doffin MCP — Norwegian government public procurement notices (BYOK / platform key).",
+  "version": "0.1.0",
+  "websiteUrl": "https://pipeworx.io/packs/doffin",
+  "repository": {
+    "url": "https://github.com/pipeworx-io/mcp-doffin",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://gateway.pipeworx.io/doffin/mcp"
+    }
+  ]
+}
