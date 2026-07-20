@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-doffin",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Doffin MCP — Norwegian government public procurement notices (BYOK / platform key).",
   "type": "module",
   "main": "src/index.ts",

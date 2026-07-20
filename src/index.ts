@@ -20,7 +20,7 @@ interface McpToolExport {
  * Doffin MCP — Norwegian government public procurement notices (BYOK / platform key).
  *
  * Wraps the official Doffin public API (Azure API Management, subscription-keyed):
- *   https://api.doffin.no/public
+ *   https://betaapi.doffin.no/public
  *   GET /v2/search              — search notices (paged, filtered, sorted)
  *   GET /v2/download/{doffinId} — full notice document by id (e.g. "2023-100282")
  *
@@ -48,7 +48,7 @@ interface McpToolExport {
  */
 
 
-const BASE = 'https://api.doffin.no/public';
+const BASE = 'https://betaapi.doffin.no/public';
 const UA =
   'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36';
 const TIMEOUT_MS = 8000;
@@ -262,7 +262,7 @@ async function callTool(name: string, args: Record<string, unknown>): Promise<un
   delete args._apiKey;
   if (!apiKey) {
     return {
-      error: 'Missing Doffin API key. The Doffin public API (api.doffin.no) requires an Azure APIM subscription key on every request.',
+      error: 'Missing Doffin API key. The Doffin public API (betaapi.doffin.no) requires an Azure APIM subscription key on every request.',
       retry_hint: KEY_GUIDANCE,
     };
   }
